@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿虎集团 TG购买</title>
+
+<!-- ==========================
+✅ 集中修改区（仅改这里）
+=========================== -->
+<script>
+const MY_QQ       = "123456789";       // 你的QQ号
+const MY_WECHAT   = "ahuhu502";        // 你的微信号
+const TG_BUY_URL = "https://t.me/AAA_502"; // 购买跳转TG链接
+const TG_DOWNLOAD = "https://telegram.org"; // 下载跳转官网
+const AUTO_OPEN   = true; // 复制后自动打开APP
+</script>
+<!-- ==========================
+✅ 修改区结束
+=========================== -->
+
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {background:#000; font-family:Arial; padding:20px;}
+.container {max-width:600px; margin:0 auto;}
+
+/* 标题 */
+.header {text-align:center; color:#fff; font-size:28px; font-weight:bold; margin-bottom:20px;}
+
+/* 白色盒子 */
+.box {background:#fff; border-radius:8px; padding:15px; margin-bottom:15px;}
+.box-title {color:#f00; font-size:20px; font-weight:bold; text-align:center; margin-bottom:15px;}
+.box-desc {color:#000; font-size:16px; line-height:1.5;}
+
+/* 按钮行 */
+.btn-item {display:flex; background:#000; border:2px solid #fff; border-radius:6px; padding:8px; margin-bottom:10px; align-items:center;}
+.btn-icon {color:#fff; font-size:20px; margin-right:10px;}
+.btn-text {flex:1; color:#000; background:#fff; padding:5px; text-align:center; font-size:18px; font-weight:bold;}
+.btn-action {color:#fff; background:#000; border:none; padding:5px 15px; font-size:18px; font-weight:bold; cursor:pointer; text-decoration:none;}
+
+/* 提示语 */
+.tips {margin:15px 0; font-size:14px;}
+.pink {color:#f0f;}
+.blue {color:#00f;}
+
+/* 底部版权 */
+.footer {background:#fff; color:#f00; text-align:center; font-size:14px; padding:10px; border-radius:8px;}
+
+/* 弹窗遮罩 */
+.mask {position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); display:none; justify-content:center; align-items:center; z-index:999;}
+.pop {background:#fff; width:90%; max-width:400px; padding:20px; border-radius:10px; text-align:center;}
+.pop h3 {margin-bottom:15px; color:#000;}
+
+/* 弹窗按钮（禁止长按选中） */
+.pop .btn {display:block; background:#000; color:#fff; padding:12px; margin:8px 0; border-radius:6px; border:none; width:100%; font-size:18px; font-weight:bold; cursor:pointer; text-decoration:none; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none;}
+.pop .return {background:#f00; margin-top:15px;}
+
+/* 复制成功提示 */
+.toast {position:fixed; top:20px; left:50%; transform:translateX(-50%); background:#000; color:#fff; padding:10px 20px; border-radius:6px; display:none; z-index:1000;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">阿虎集团 TG购买</div>
+
+    <div class="box">
+        <div class="box-title">苹果ID-X账号-飞机号-抖音-快手-微信-QQ</div>
+        <div class="box-desc">各种各样的账号账号购买，由于国内防火墙的限制，让注册Telegram账号成为一件很难的事情，所以很多人都会选择在网上直接购买现成的账号。</div>
+    </div>
+
+    <div class="box">
+        <!-- 前往购买 -->
+        <div class="btn-item">
+            <div class="btn-icon">👆</div>
+            <div class="btn-text">各种账号</div>
+            <div class="btn-action" onclick="document.getElementById('buyMask').style.display='flex'">前往购买</div>
+        </div>
+
+        <!-- 前往查看 -->
+        <div class="btn-item">
+            <div class="btn-icon">👆</div>
+            <div class="btn-text">TG百科</div>
+            <div class="btn-action" onclick="document.getElementById('viewMask').style.display='flex'">前往查看</div>
+        </div>
+
+        <div class="tips">
+            <p class="pink">⚠ 如链接打不开，请更换浏览器打开！</p>
+            <p class="blue">⚠ 推荐使用EDGE/夸克/谷歌浏览器！</p>
+            <p class="blue">⚠ Telegram官网需要加速器才能进！</p>
+        </div>
+
+        <!-- 下载 -->
+        <div class="btn-item">
+            <div class="btn-icon">👆</div>
+            <div class="btn-text">telegram【纸飞机】</div>
+            <a href="javascript:window.open(TG_DOWNLOAD,'_blank')" class="btn-action">下载</a>
+        </div>
+    </div>
+
+    <div class="footer">台ICP备51341880号-51 Copyright © 2026</div>
+</div>
+
+<!-- ==========================
+购买方式弹窗
+=========================== -->
+<div id="buyMask" class="mask">
+    <div class="pop">
+        <h3>选择购买方式</h3>
+        <button class="btn" onclick="showQQ(); buyMask.style.display='none'">🐧 QQ</button>
+        <button class="btn" onclick="showWechat(); buyMask.style.display='none'">💬 微信</button>
+        <a href="javascript:window.open(TG_BUY_URL,'_blank'); buyMask.style.display='none'" class="btn">✈️Telegram</a>
+        <button class="btn return" onclick="buyMask.style.display='none'">返回</button>
+    </div>
+</div>
+
+<!-- ==========================
+QQ弹窗
+=========================== -->
+<div id="qqMask" class="mask">
+    <div class="pop">
+        <h3>联系QQ</h3>
+        <p style="font-size:20px; font-weight:bold; margin:15px 0" id="qqtext"></p>
+        <button class="btn" onclick="copyAndOpenQQ()">复制QQ号并打开QQ</button>
+        <button class="btn return" onclick="qqMask.style.display='none'">返回</button>
+    </div>
+</div>
+
+<!-- ==========================
+微信弹窗
+=========================== -->
+<div id="wechatMask" class="mask">
+    <div class="pop">
+        <h3>联系微信</h3>
+        <p style="font-size:20px; font-weight:bold; margin:15px 0" id="wechattext"></p>
+        <button class="btn" onclick="copyAndOpenWechat()">复制微信号并打开微信</button>
+        <button class="btn return" onclick="wechatMask.style.display='none'">返回</button>
+    </div>
+</div>
+
+<!-- ==========================
+教程弹窗
+=========================== -->
+<div id="viewMask" class="mask">
+    <div class="pop">
+        <h3>选择查看教程</h3>
+        <button class="btn" onclick="window.open('TG养号防封.html','_blank'); viewMask.style.display='none'">📌 TG养号防封</button>
+        <button class="btn" onclick="window.open('用户协议要点.html','_blank'); viewMask.style.display='none'">📜 用户协议要点</button>
+        <button class="btn" onclick="window.open('解除敏感限制.html','_blank'); viewMask.style.display='none'">🔓 解除敏感限制</button>
+        <button class="btn" onclick="window.open('解除私信限制.html','_blank'); viewMask.style.display='none'">📩 解除私信限制</button>
+        <button class="btn" onclick="window.open('如何上号.html','_blank'); viewMask.style.display='none'">🔑 如何上号</button>
+        <button class="btn return" onclick="viewMask.style.display='none'">返回</button>
+    </div>
+</div>
+
+<!-- 复制成功提示 -->
+<div id="toast" class="toast">复制成功！</div>
+
+<script>
+// 自动显示号码
+qqtext.innerText = MY_QQ;
+wechattext.innerText = MY_WECHAT;
+
+// 打开弹窗
+function showQQ(){qqMask.style.display='flex'}
+function showWechat(){wechatMask.style.display='flex'}
+
+// 复制并打开QQ
+function copyAndOpenQQ() {
+    navigator.clipboard.writeText(MY_QQ).then(()=>{
+        toast.innerText = "QQ号已复制，正在打开QQ...";
+        toast.style.display = "block";
+        setTimeout(()=>{
+            toast.style.display = "none";
+            qqMask.style.display = "none";
+            AUTO_OPEN && (window.location.href = "mqq://");
+        },1000);
+    })
+}
+
+// 复制并打开微信
+function copyAndOpenWechat() {
+    navigator.clipboard.writeText(MY_WECHAT).then(()=>{
+        toast.innerText = "微信号已复制，正在打开微信...";
+        toast.style.display = "block";
+        setTimeout(()=>{
+            toast.style.display = "none";
+            wechatMask.style.display = "none";
+            AUTO_OPEN && (window.location.href = "weixin://");
+        },1000);
+    })
+}
+</script>
+
+</body>
+</html>

@@ -14,57 +14,50 @@
     .content-list li{background-color:#f8f9fa;margin-bottom:12px;padding:15px 20px;border-radius:10px;border-left:4px solid #007bff;transition:transform 0.2s ease-in-out;}
     .content-list li:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.05);}
     .section-title{font-size:18px;font-weight:bold;margin:20px 0 10px;color:#212529;}
-    .contact-card{background:linear-gradient(90deg, #667eea 0%, #764ba2 100%);color:white;padding:20px;border-radius:16px;text-align:center;margin-top:30px;}
-    .contact-title{font-size:24px;font-weight:500;margin-bottom:15px;display:flex;align-items:center;justify-content:center;gap:8px;}
-    .contact-title::before{content:"📞";font-size:24px;}
-    .contact-info{font-size:24px;font-weight:400;}
+    .contact-card{background:linear-gradient(90deg, #667eea 0%, #764ba2 100%);color:white;padding:20px;border-radius:16px;text-align:center;margin-top:30px;cursor:pointer;}
+    .contact-title{font-size:24px;font-weight:500;margin-bottom:15px;}
+    .contact-info{font-size:18px;font-weight:400;}
 </style>
 </head>
 <body>
 <div class="container">
     <h1>📜 Telegram用户协议要点</h1>
     <div class="ahu-badge">—— 阿虎专属整理 ——</div>
-
     <p class="section-title">❌ 禁止内容与行为</p>
     <ul class="content-list">
         <li>严禁传播非法内容（暴力、儿童剥削、恐怖主义、仇恨言论等）。</li>
         <li>禁止垃圾广告、自动化滥发消息（需官方API授权）。</li>
         <li>不得侵犯他人隐私（如未经同意的数据收集）。</li>
     </ul>
-
     <p class="section-title">📱 账号规则</p>
     <ul class="content-list">
         <li>账号必须绑定手机号，长期未登录可能被回收（通常1年以上）。</li>
         <li>封号条件：违反协议、批量注册、异常活动（频繁加群/换IP）。</li>
     </ul>
-
     <p class="section-title">🔒 隐私与数据</p>
     <ul class="content-list">
         <li>私密聊天（Secret Chat）：端到端加密，仅限设备间传输。</li>
         <li>群组/频道：内容存储在服务器，不端到端加密。</li>
         <li>用户可手动删除消息，支持双向删除。</li>
     </ul>
-
     <p class="section-title">⚖️ 法律责任</p>
     <ul class="content-list">
         <li>配合司法机关数据请求（需合法程序，如法院命令）。</li>
         <li>用户需严格遵守所在国家/地区法律。</li>
     </ul>
-
     <p class="section-title">📌 免责声明</p>
     <ul class="content-list">
         <li>Telegram 不保证服务永久可用，不承担使用引发的间接损失。</li>
     </ul>
-
     <p class="section-title">⚠️ 常见违规后果</p>
     <ul class="content-list">
         <li>首次违规：限制功能（禁止加群、私信受限）。</li>
         <li>严重违规：直接永久封禁账号。</li>
     </ul>
 
-    <div class="contact-card">
-        <div class="contact-title">技术支持与合作联系</div>
-        <div class="contact-info">Telegram：@AAA_502</div>
+    <div class="contact-card" onclick="window.open('https://t.me/AAA_502','_blank')">
+        <div class="contact-title">👉 联系客服</div>
+        <div class="contact-info">点击即可打开TG客服</div>
     </div>
 </div>
 </body>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跳转中...</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0f1419;
+            color: #fff;
+            font-family: "Microsoft Yahei",sans-serif;
+        }
+        .box{text-align:center;}
+        .count{
+            font-size: 72px;
+            font-weight: bold;
+            color: #409eff;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        .tip{font-size:18px;color:#ccc;}
+        .link{
+            color:#409eff;
+            text-decoration:none;
+        }
+        .link:hover{text-decoration:underline;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>页面正在跳转</h2>
+        <div class="count" id="countNum">3</div>
+        <p class="tip">
+            秒后自动跳转，无响应请
+            <a href="https://www.baidu.com" class="link">点击立即前往</a>
+        </p>
+    </div>
+
+    <script>
+        // ========== 在这里改你的跳转链接 ==========
+        const targetUrl = "https://tgsss.com/5BC8F040";
+        let time = 3;
+        const countDom = document.getElementById('countNum');
+
+        const timer = setInterval(() => {
+            time--;
+            countDom.innerText = time;
+            if(time <= 0){
+                clearInterval(timer);
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
